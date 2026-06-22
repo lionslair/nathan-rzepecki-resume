@@ -1,0 +1,13 @@
+{
+    "name": "nathanrzepecki/resume",
+    "description": "Nathan Rzepecki Resume",
+    "authors": [
+        {
+            "name": "Nathan Rzepecki",
+            "email": "nathan@lionslair.net.au"
+        }
+    ],
+    "require": {
+        "juststeveking/resume-php": "^1.0"
+    }
+}
