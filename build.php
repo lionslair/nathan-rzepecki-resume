@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__.'/vendor/autoload.php';
 
 use JustSteveKing\Resume\Builders\ResumeBuilder;
 use JustSteveKing\Resume\DataObjects\Basics;
@@ -22,12 +22,12 @@ use JustSteveKing\Resume\Exporters\YamlExporter;
 use JustSteveKing\Resume\ValueObjects\Email;
 use JustSteveKing\Resume\ValueObjects\Url;
 
-$resume = (new ResumeBuilder())
+$resume = (new ResumeBuilder)
     ->basics(new Basics(
         name: 'Nathan Rzepecki',
         label: 'Full-Stack Software Engineer | PHP & Laravel Expert',
         email: new Email('nathan@lionslair.net.au'),
-        phone: '+61 412 850 501',
+        // phone: '+61 412 850 501',
         url: new Url('https://nathanrzepecki.me'),
         summary: 'Full-stack software engineer with extensive expertise in Laravel and Vue.js, specialising in building scalable web applications and API integrations. Proven track record developing healthcare platforms, payment systems, and enterprise solutions with a focus on security, performance, and maintainability. DevOps proficient with Docker, CI/CD pipelines, and cloud infrastructure (AWS). Strong advocate for privacy and data ownership — personally maintains a fully local, self-hosted home automation system using Home Assistant. Based in Western Australia; successfully working remote since 2018.',
         location: new Location(
@@ -295,23 +295,23 @@ $resume = (new ResumeBuilder())
 
 // --- Output ---
 
-if (!is_dir(__DIR__ . '/output')) {
-    mkdir(__DIR__ . '/output', 0755, true);
+if (! is_dir(__DIR__.'/output')) {
+    mkdir(__DIR__.'/output', 0755, true);
 }
 
 // JSON
 $json = json_encode($resume->jsonSerialize(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-file_put_contents(__DIR__ . '/output/resume.json', $json);
+file_put_contents(__DIR__.'/output/resume.json', $json);
 echo "✓ output/resume.json\n";
 
 // YAML
-$yaml = (new YamlExporter())->export($resume);
-file_put_contents(__DIR__ . '/output/resume.yaml', $yaml);
+$yaml = (new YamlExporter)->export($resume);
+file_put_contents(__DIR__.'/output/resume.yaml', $yaml);
 echo "✓ output/resume.yaml\n";
 
 // Markdown
-$markdown = (new MarkdownExporter())->export($resume);
-file_put_contents(__DIR__ . '/output/resume.md', $markdown);
+$markdown = (new MarkdownExporter)->export($resume);
+file_put_contents(__DIR__.'/output/resume.md', $markdown);
 echo "✓ output/resume.md\n";
 
 // Summary
@@ -319,5 +319,5 @@ $summary = $resume->getSummary();
 echo "\n--- Resume Summary ---\n";
 foreach ($summary as $key => $value) {
     $label = str_pad(str_replace('_', ' ', $key), 22);
-    echo "  {$label}: " . (is_bool($value) ? ($value ? 'yes' : 'no') : $value) . "\n";
+    echo "  {$label}: ".(is_bool($value) ? ($value ? 'yes' : 'no') : $value)."\n";
 }
