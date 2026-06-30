@@ -43,11 +43,6 @@ $resume = (new ResumeBuilder)
                 url: new Url('https://github.com/lionslair/'),
             ),
             new Profile(
-                network: Network::Bitbucket,
-                username: 'lionslair',
-                url: new Url('https://bitbucket.org/lionslair/'),
-            ),
-            new Profile(
                 network: Network::LinkedIn,
                 username: 'nathanrzepecki',
                 url: new Url('https://www.linkedin.com/in/nathanrzepecki/'),
