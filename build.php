@@ -12,6 +12,7 @@ use JustSteveKing\Resume\DataObjects\Language;
 use JustSteveKing\Resume\DataObjects\Location;
 use JustSteveKing\Resume\DataObjects\Profile;
 use JustSteveKing\Resume\DataObjects\Project;
+use JustSteveKing\Resume\DataObjects\Reference;
 use JustSteveKing\Resume\DataObjects\Skill;
 use JustSteveKing\Resume\DataObjects\Work;
 use JustSteveKing\Resume\Enums\EducationLevel;
@@ -284,6 +285,18 @@ $resume = (new ResumeBuilder)
     ->addLanguage(new Language(
         language: 'English',
         fluency: 'Native',
+    ))
+
+    // --- Recommendations ---
+
+    ->addReference(new Reference(
+        name: 'Tung Do, Team Leader at DCODE GROUP',
+        reference: "I had the pleasure of working closely with Nathan and can confidently say that he is one of the most capable Team Leaders I have worked with.\n\nWhat sets him apart is his ability to lead by example. He consistently demonstrates professionalism, accountability, and a strong commitment to both project success and team growth. He takes responsibility not only for delivering results but also for supporting every member of the team, creating an environment where people feel valued, challenged, and motivated to grow.\n\nFrom a technical perspective, he possesses deep expertise in Laravel, PHP, Vue.js, Inertia.js, AWS, Cloud Infrastructure, CI/CD, and DevOps practices. He continuously embraces new technologies and quickly turns them into practical solutions that improve product quality, team productivity, and operational efficiency.\n\nHe also has a strong understanding of the entire software development lifecycle, from requirements gathering and solution design to development, testing, deployment, and post-release operations. His ability to bridge software engineering and DevOps enables teams to deliver reliable, scalable, and maintainable solutions with confidence.\n\nEqually important, he is always open to feedback and actively encourages constructive discussions. His commitment to building a healthy, collaborative, and growth-oriented culture makes him the kind of leader that engineers enjoy working with and learning from.\n\nI would highly recommend Nathan to any organization looking for a strong technical leader who combines excellent engineering expertise with outstanding leadership qualities.",
+    ))
+
+    ->addReference(new Reference(
+        name: 'Attila Dobosi, Web Developer at DCODE GROUP',
+        reference: "Nathan is hard-working and diligent with a lot of experience. I was amazed how quickly he could learned new technologies and implement to projects we were working on. He has not only good programming- but has good code and project managing skills. I could easily work with his code because he strives for clean code. He is also very good mapping people's competence in projects therefore everyone could easily finish and learn from the task they were assigned for. I can highly recommend him.",
     ))
 
     ->build();
