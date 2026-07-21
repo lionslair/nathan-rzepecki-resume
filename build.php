@@ -388,17 +388,16 @@ $resume = (new ResumeBuilder)
 
     ->addProject(new Project(
         name: 'Best Rated Transport',
-        startDate: '2015-01-01',
-        endDate: '2016-10-01',
-        description: 'Western Australian branch of the national association for independent schools. Built on Drupal 7 with a teacher professional development platform, a school job portal, and a capital grants application system handling sensitive student and school data.',
+        startDate: '2020-10-01',
+        description: 'National quote-comparison marketplace connecting customers with a network of vetted transport and removalist companies, built on Laravel. Longest-running project at DCODE Group, spanning the public tender/bidding system, transport-partner portal, and admin tooling since 2020.',
         highlights: [
-            'Drupal 7 platform with role-based candidate and school portals',
-            'Third-party email delivery integration for guaranteed notification tracking',
-            'Personal Development Plan (PDP) system for teachers with searchable job matching and approval workflows',
-            'Job portal automating applications and notifications between schools and candidates',
-            'Capital Grants application system handling sensitive student and school data for funding submissions',
+            'Tender/bidding marketplace matching customer quote requests against a network of transport company partners, with automated email notifications for quotes, tender submissions, and expiring tenders',
+            'Stripe Connect onboarding and payouts for transport partners, with commission tracking and GST-compliant invoicing',
+            'AWS Pinpoint SMS delivery with opt-out handling, processed via Spatie webhook-client for delivery and inbound events',
+            'Laravel Horizon and Telescope for queue processing and observability, with CI/CD migrated to self-hosted GitHub Actions runners and PHPStan/Larastan static analysis',
+            'Short-link generation for tenders, activity logging across the quote/tender lifecycle, and automated post-job review request emails',
         ],
-        url: new Url('https://www.ais.wa.edu.au/'),
+        url: new Url('https://bestratedtransport.com.au'),
     ))
 
     // --- Languages ---
