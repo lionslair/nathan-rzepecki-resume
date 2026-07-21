@@ -1,6 +1,5 @@
 /vendor
 /.composer.lock
 /node_modules
-/output
 /.claude/skills/analyze-contributions/data/repos.json
 /.claude/skills/analyze-contributions/data/manifests/

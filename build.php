@@ -221,7 +221,7 @@ $resume = (new ResumeBuilder)
     ->addSkill(new Skill(
         name: 'Integrations',
         level: SkillLevel::Advanced,
-        keywords: ['Xero API', 'Typesense', 'Algolia', 'MailChimp', 'Slack', 'Mailgun', 'GitHub API', 'GitHub webhooks', 'SOAP/XML web services', 'Geotab', 'MessageMedia SMS'],
+        keywords: ['Xero API', 'MYOB API', 'Typesense', 'Algolia', 'MailChimp', 'Slack', 'Mailgun', 'GitHub API', 'GitHub webhooks', 'SOAP/XML web services', 'Geotab', 'MessageMedia SMS', 'Vonage'],
     ))
 
     ->addSkill(new Skill(
@@ -233,7 +233,7 @@ $resume = (new ResumeBuilder)
     ->addSkill(new Skill(
         name: 'CMS & E-commerce',
         level: SkillLevel::Expert,
-        keywords: ['Drupal 6/7', 'Magento'],
+        keywords: ['Drupal 6/7', 'Magento', 'WordPress (Bedrock)'],
     ))
 
     ->addSkill(new Skill(
