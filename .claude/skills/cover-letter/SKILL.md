@@ -46,7 +46,7 @@ Structure:
 1. Greeting — `Dear Hiring Manager,` or `Dear [Company] Team,` unless a named contact is given in the ad.
 2. Opening line naming the role and company, with a hook tied to what the company does (from the ad), not a generic "I am writing to apply for...".
 3. 2-3 body paragraphs mapping specific resume experience to the ad's stated requirements — this is the core of the letter.
-4. Short closing paragraph (availability/enthusiasm) + sign-off with `Nathan Rzepecki`.
+4. Short closing paragraph (availability/enthusiasm), noting a preference for initial contact by email — Nathan doesn't answer phone calls from unknown or unexpected numbers — then sign-off with `Nathan Rzepecki`.
 
 Aim for ~250-400 words (one screen, not a full page). Match the voice already used in `build.php`'s `Basics.summary` and project highlights — direct, outcome-oriented, no filler adjectives.
 
