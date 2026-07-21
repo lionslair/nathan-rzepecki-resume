@@ -30,18 +30,27 @@ tmpdir="$(mktemp -d)"
 trap 'rm -rf "$tmpdir"' EXIT
 
 cat > "$tmpdir/print.css" <<'CSS'
-@page { size: A4; margin: 14mm 12mm; }
+@page { size: A4; margin: 10mm 8mm; }
 @media print {
-  html { font-size: 10.5px; }
-  body { gap: 1.2em; margin-bottom: 0; font-family: Calibri, Carlito, "Liberation Sans", Arial, sans-serif; }
-  .masthead { padding: 2em 0; }
-  article > * + *, .timeline > div > * + * { margin-top: .4em; }
-  .timeline > div:not(:last-child) { padding-bottom: .5rem; }
+  html { font-size: 12px; }
+  body {
+    gap: 1em;
+    margin-bottom: 0;
+    font-family: Calibri, Carlito, "Liberation Sans", Arial, sans-serif;
+    /* The theme's default grid reserves a 1fr gutter on each side to center a
+       fixed-width (12em + 36em) column pair, which wastes ~25% of the page
+       width when printed. Drop the gutters and let the side/content columns
+       fill the full page width instead. */
+    grid-template-columns: [full-start] 0 [main-start side-start] minmax(8em,22%) [side-end content-start] 1fr [main-end content-end] 0 [full-end];
+  }
+  .masthead { padding: 1.2em 0; }
+  article > * + *, .timeline > div > * + * { margin-top: .35em; }
+  .timeline > div:not(:last-child) { padding-bottom: .35rem; }
   h3, article > header { page-break-after: avoid; break-after: avoid; }
   /* Chromium mis-paginates CSS Grid across page breaks (rows overlap instead of
      flowing onto the next page), so drop to plain block/column flow for print. */
   .stack { display: block; }
-  .stack > * + * { margin-top: 1.5em; }
+  .stack > * + * { margin-top: 1em; }
   .grid-list { display: block; columns: 2; column-gap: 2em; }
   .grid-list > * { break-inside: avoid; margin-bottom: 1em; }
   blockquote { break-inside: avoid-page; }
@@ -57,8 +66,9 @@ awk -v cssfile="$tmpdir/print.css" '
   { print }
 ' output/resume.html > "$tmpdir/resume-print.html"
 
-google-chrome --headless --disable-gpu --print-to-pdf="$(pwd)/output/resume.pdf" --no-pdf-header-footer "$tmpdir/resume-print.html" 2>/dev/null
-echo "✓ output/resume.pdf"
+pdfname="nathan_rzepecki_$(date +%B_%Y | tr '[:upper:]' '[:lower:]').pdf"
+google-chrome --headless --disable-gpu --print-to-pdf="$(pwd)/output/$pdfname" --no-pdf-header-footer "$tmpdir/resume-print.html" 2>/dev/null
+echo "✓ output/$pdfname"
 
 echo ""
 echo "Done. Files in output/:"
