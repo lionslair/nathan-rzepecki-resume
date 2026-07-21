@@ -79,8 +79,9 @@ $resume = (new ResumeBuilder)
         location: 'Perth, Western Australia',
         startDate: '2018-04-01',
         endDate: '2020-10-01',
-        summary: 'Led web development and project management for multiple SaaS web applications, overseeing technical decisions, team delivery, and quality assurance.',
+        summary: 'Led web development and project management for multiple SaaS web applications, overseeing technical decisions, team delivery, and quality assurance for a distributed engineering team.',
         highlights: [
+            'Directly led a distributed engineering team of seven developers across Vietnam, Hungary, and France',
             'Owned all web-related project management including task creation and assignment in JIRA',
             'Conducted pull request reviews and QA processes across the engineering team',
             'Made all technology choices and drove system design for new and existing platforms',
