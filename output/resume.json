@@ -265,6 +265,7 @@
             "level": "Advanced",
             "keywords": [
                 "Xero API",
+                "MYOB API",
                 "Typesense",
                 "Algolia",
                 "MailChimp",
@@ -274,7 +275,8 @@
                 "GitHub webhooks",
                 "SOAP/XML web services",
                 "Geotab",
-                "MessageMedia SMS"
+                "MessageMedia SMS",
+                "Vonage"
             ]
         },
         {
@@ -296,7 +298,8 @@
             "level": "Expert",
             "keywords": [
                 "Drupal 6/7",
-                "Magento"
+                "Magento",
+                "WordPress (Bedrock)"
             ]
         },
         {

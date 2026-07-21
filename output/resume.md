@@ -74,9 +74,9 @@ Drupal 7 in Other
 - **Database & Caching**: MySQL, MariaDB, SQL Server, Redis, Typesense, Valkey, Memcached, Elasticsearch, Solr, Queue systems
 - **Testing**: Pest PHP, PHPUnit, Laravel Dusk, Playwright, TDD, Feature testing, Unit testing
 - **Payment Processing**: Stripe, Stripe Terminal, eWay, PayPal, PCI compliance, Checkout, Payment elements, Webhooks
-- **Integrations**: Xero API, Typesense, Algolia, MailChimp, Slack, Mailgun, GitHub API, GitHub webhooks, SOAP/XML web services, Geotab, MessageMedia SMS
+- **Integrations**: Xero API, MYOB API, Typesense, Algolia, MailChimp, Slack, Mailgun, GitHub API, GitHub webhooks, SOAP/XML web services, Geotab, MessageMedia SMS, Vonage
 - **Document Processing**: DomPDF, FPDF, Spatie PDF, Excel import/export, Intervention Image, Spatie Media Library, Browsershot, Puppeteer
-- **CMS & E-commerce**: Drupal 6/7, Magento
+- **CMS & E-commerce**: Drupal 6/7, Magento, WordPress (Bedrock)
 - **AI & Real-Time Systems**: OpenAI API, LLM-assisted features, Laravel Reverb, Pusher, Laravel Echo, WebSockets
 - **Monitoring & Observability**: Bugsnag, Spatie Laravel Health, Laravel Pulse, Laravel Nightwatch, OhDear uptime monitoring
 - **Systems & Networking**: Linux, Ubuntu, Debian, Nginx, Apache, SSH, DNS, SMTP, Firewalls
