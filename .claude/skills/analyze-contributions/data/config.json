@@ -1,0 +1,16 @@
+{
+  "github_user": "lionslair",
+  "author_emails": [
+    "nathan@lionslair.net.au"
+  ],
+  "orgs": [
+    "DCODE-GROUP",
+    "Eastern-Plant-Hire-EPH",
+    "embedded-health",
+    "Outsourcing-Inc"
+  ],
+  "local_roots": [
+    "/home/nathanr/Code"
+  ],
+  "build_php_path": "/home/nathanr/Code/nathan-rzepecki-resume/build.php"
+}

@@ -179,19 +179,19 @@ $resume = (new ResumeBuilder)
     ->addSkill(new Skill(
         name: 'Laravel Ecosystem',
         level: SkillLevel::Expert,
-        keywords: ['Nova', 'Horizon', 'Telescope', 'Pulse', 'Sanctum', 'Passport', 'Jetstream', 'Livewire', 'Inertia.js'],
+        keywords: ['Nova', 'Horizon', 'Telescope', 'Pulse', 'Sanctum', 'Passport', 'Fortify', 'Cashier', 'Scout', 'Reverb', 'Jetstream', 'Livewire', 'Inertia.js'],
     ))
 
     ->addSkill(new Skill(
         name: 'Frontend Development',
         level: SkillLevel::Advanced,
-        keywords: ['Vue.js 2.x & 3.x', 'Vuex', 'Alpine.js', 'TailwindCSS', 'Vite', 'Bootstrap', 'JavaScript', 'jQuery', 'CSS3'],
+        keywords: ['Vue.js 2.x & 3.x', 'TypeScript', 'Vuex', 'Alpine.js', 'TailwindCSS', 'Vuetify', 'Chart.js', 'Vite', 'Bootstrap', 'JavaScript', 'jQuery', 'CSS3'],
     ))
 
     ->addSkill(new Skill(
         name: 'Cloud & Infrastructure',
         level: SkillLevel::Advanced,
-        keywords: ['AWS S3', 'AWS Lambda', 'AWS RDS', 'AWS SES', 'Route53', 'CloudFront', 'WAF', 'Textract', 'Docker', 'Docker Compose', 'Ansible', 'Terraform'],
+        keywords: ['AWS S3', 'AWS Lambda', 'AWS RDS', 'AWS SES', 'Route53', 'CloudFront', 'WAF', 'Textract', 'Laravel Forge', 'Docker', 'Docker Compose', 'Ansible', 'Terraform'],
     ))
 
     ->addSkill(new Skill(
@@ -203,25 +203,25 @@ $resume = (new ResumeBuilder)
     ->addSkill(new Skill(
         name: 'Database & Caching',
         level: SkillLevel::Expert,
-        keywords: ['MySQL', 'MariaDB', 'Redis', 'Typesense', 'Valkey', 'Memcached', 'Elasticsearch', 'Solr', 'Queue systems'],
+        keywords: ['MySQL', 'MariaDB', 'SQL Server', 'Redis', 'Typesense', 'Valkey', 'Memcached', 'Elasticsearch', 'Solr', 'Queue systems'],
     ))
 
     ->addSkill(new Skill(
         name: 'Testing',
         level: SkillLevel::Advanced,
-        keywords: ['Pest PHP', 'PHPUnit', 'Laravel Dusk', 'TDD', 'Feature testing', 'Unit testing'],
+        keywords: ['Pest PHP', 'PHPUnit', 'Laravel Dusk', 'Playwright', 'TDD', 'Feature testing', 'Unit testing'],
     ))
 
     ->addSkill(new Skill(
         name: 'Payment Processing',
         level: SkillLevel::Advanced,
-        keywords: ['Stripe', 'eWay', 'PayPal', 'PCI compliance', 'Checkout', 'Payment elements', 'Webhooks'],
+        keywords: ['Stripe', 'Stripe Terminal', 'eWay', 'PayPal', 'PCI compliance', 'Checkout', 'Payment elements', 'Webhooks'],
     ))
 
     ->addSkill(new Skill(
         name: 'Integrations',
         level: SkillLevel::Advanced,
-        keywords: ['Xero API', 'Typesense', 'MailChimp', 'Slack', 'Mailgun', 'GitHub webhooks'],
+        keywords: ['Xero API', 'Typesense', 'Algolia', 'MailChimp', 'Slack', 'Mailgun', 'GitHub API', 'GitHub webhooks', 'SOAP/XML web services', 'Geotab', 'MessageMedia SMS'],
     ))
 
     ->addSkill(new Skill(
@@ -234,6 +234,18 @@ $resume = (new ResumeBuilder)
         name: 'CMS & E-commerce',
         level: SkillLevel::Expert,
         keywords: ['Drupal 6/7', 'Magento'],
+    ))
+
+    ->addSkill(new Skill(
+        name: 'AI & Real-Time Systems',
+        level: SkillLevel::Intermediate,
+        keywords: ['OpenAI API', 'LLM-assisted features', 'Laravel Reverb', 'Pusher', 'Laravel Echo', 'WebSockets'],
+    ))
+
+    ->addSkill(new Skill(
+        name: 'Monitoring & Observability',
+        level: SkillLevel::Advanced,
+        keywords: ['Bugsnag', 'Spatie Laravel Health', 'Laravel Pulse', 'Laravel Nightwatch', 'OhDear uptime monitoring'],
     ))
 
     ->addSkill(new Skill(
