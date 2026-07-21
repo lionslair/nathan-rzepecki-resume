@@ -247,6 +247,7 @@ $resume = (new ResumeBuilder)
     ->addProject(new Project(
         name: 'The Trusted Trolley',
         startDate: '2013-03-01',
+        endDate: '2015-05-01',
         description: 'Health food information website helping consumers identify products free from harmful additives. Built with Drupal 7, featuring Solr-powered search and a subscription-based catalogue.',
         highlights: [
             'Drupal 7 repository of food products and additives',
@@ -259,6 +260,7 @@ $resume = (new ResumeBuilder)
     ->addProject(new Project(
         name: 'Short Street Gallery',
         startDate: '2013-04-01',
+        endDate: '2015-05-01',
         description: 'Full business management system for a premier Indigenous art gallery in Broome, WA. Built on Drupal 6 with complete back-office management including artworks, clients, artists, financials, exhibitions, reporting, and marketing.',
         highlights: [
             'Complex Drupal 6 CMS tailored to gallery business processes',
@@ -267,18 +269,22 @@ $resume = (new ResumeBuilder)
         ],
         url: new Url('http://shortstgallery.com.au'),
     ))
-
+   
     ->addProject(new Project(
-        name: 'Teacher Recruitment International',
-        startDate: '2014-01-01',
-        description: 'Teacher placement platform connecting candidates with international schools worldwide. Built on Drupal 7 with customised email notifications via third-party delivery service, approval workflows, and job matching.',
+        name: 'Association of Independent Schools of Western Australia',
+        startDate: '2015-01-01',
+        endDate: '2016-10-01',
+        description: 'Western Australian branch of the national association for independent schools. Built on Drupal 7 with a teacher professional development platform, a school job portal, and a capital grants application system handling sensitive student and school data.',
         highlights: [
             'Drupal 7 platform with role-based candidate and school portals',
-            'Third-party email delivery integration for guaranteed tracking',
-            'Customised notification workflows with human-approval gates',
+            'Third-party email delivery integration for guaranteed notification tracking',
+            'Personal Development Plan (PDP) system for teachers with searchable job matching and approval workflows',
+            'Job portal automating applications and notifications between schools and candidates',
+            'Capital Grants application system handling sensitive student and school data for funding submissions',
         ],
-        url: new Url('http://www.triaust.com'),
-    ))
+        url: new Url('https://www.ais.wa.edu.au/'),
+    )
+    )
 
     // --- Languages ---
 
