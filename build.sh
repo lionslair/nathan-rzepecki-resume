@@ -32,20 +32,26 @@ trap 'rm -rf "$tmpdir"' EXIT
 cat > "$tmpdir/print.css" <<'CSS'
 @page { size: A4; margin: 10mm 8mm; }
 @media print {
-  html { font-size: 12px; }
+  html { font-size: 24px; }
   body {
     gap: 1em;
     margin-bottom: 0;
     font-family: Calibri, Carlito, "Liberation Sans", Arial, sans-serif;
     /* The theme's default grid reserves a 1fr gutter on each side to center a
        fixed-width (12em + 36em) column pair, which wastes ~25% of the page
-       width when printed. Drop the gutters and let the side/content columns
-       fill the full page width instead. */
-    grid-template-columns: [full-start] 0 [main-start side-start] minmax(8em,22%) [side-end content-start] 1fr [main-end content-end] 0 [full-end];
+       width when printed. Drop the gutters and shrink the section-label
+       sidebar to just what the labels need, so content starts near the
+       left edge instead of a wide mostly-empty gutter. */
+    grid-template-columns: [full-start] 0 [main-start side-start] minmax(9em,12%) [side-end content-start] 1fr [main-end content-end] 0 [full-end];
   }
   .masthead { padding: 1.2em 0; }
   article > * + *, .timeline > div > * + * { margin-top: .35em; }
   .timeline > div:not(:last-child) { padding-bottom: .35rem; }
+  /* Section labels (Work, References, ...) use a theme font-size that scales
+     with the root, so doubling the body font for print also doubled these
+     past their narrow sidebar column, overflowing into the content next to
+     them. Keep them at a fixed, moderate size instead. */
+  h3 { font-size: 1.15em; }
   h3, article > header { page-break-after: avoid; break-after: avoid; }
   /* Chromium mis-paginates CSS Grid across page breaks (rows overlap instead of
      flowing onto the next page), so drop to plain block/column flow for print. */
