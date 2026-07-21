@@ -38,6 +38,13 @@ cat > "$tmpdir/print.css" <<'CSS'
   article > * + *, .timeline > div > * + * { margin-top: .4em; }
   .timeline > div:not(:last-child) { padding-bottom: .5rem; }
   h3, article > header { page-break-after: avoid; break-after: avoid; }
+  /* Chromium mis-paginates CSS Grid across page breaks (rows overlap instead of
+     flowing onto the next page), so drop to plain block/column flow for print. */
+  .stack { display: block; }
+  .stack > * + * { margin-top: 1.5em; }
+  .grid-list { display: block; columns: 2; column-gap: 2em; }
+  .grid-list > * { break-inside: avoid; margin-bottom: 1em; }
+  blockquote { break-inside: avoid-page; }
 }
 CSS
 
