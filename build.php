@@ -284,7 +284,6 @@ $resume = (new ResumeBuilder)
         ],
         url: new Url('https://www.ais.wa.edu.au/'),
     )
-    )
 
     // --- Languages ---
 
