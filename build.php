@@ -269,7 +269,7 @@ $resume = (new ResumeBuilder)
         ],
         url: new Url('http://shortstgallery.com.au'),
     ))
-   
+
     ->addProject(new Project(
         name: 'Association of Independent Schools of Western Australia',
         startDate: '2015-01-01',
@@ -282,8 +282,112 @@ $resume = (new ResumeBuilder)
             'Job portal automating applications and notifications between schools and candidates',
             'Capital Grants application system handling sensitive student and school data for funding submissions',
         ],
+        url: new Url('https://www.ais.wa.edu.au'),
+    ))
+
+    ->addProject(new Project(
+        name: 'Flooringlab',
+        startDate: '2020-10-01',
+        description: 'Multi-tenant B2B trade platform for the flooring industry, built on Laravel with Vue 3 and Livewire. Long-running lead engineering role spanning order and inventory management, warehouse operations, subscription billing, and accounting integration across a growing multi-tenant SaaS product.',
+        highlights: [
+            'Multi-tenant Laravel architecture (stancl/tenancy) serving isolated B2B storefronts with per-tenant domains and branding',
+            'Warehouse and inventory management covering stock transfers, purchase orders, and cross-warehouse stock allocation',
+            'Order and credit note lifecycle integrated with Xero for automated account code syncing and payment reconciliation',
+            'Subscription billing and account-level pricing plans via Laravel Cashier, with PDF generation for orders and invoices',
+            'Ownership of CI/CD: GitHub Actions workflows, Docker-based deployments, PHPStan static analysis, and Pest test suites',
+        ],
+        url: new Url('https://b2b.theflooringlab.com.au'),
+    ))
+
+    ->addProject(new Project(
+        name: 'EPH',
+        startDate: '2020-10-01',
+        description: 'Operations platform for Eastern Plant Hire, a civil construction plant hire company, migrating a legacy CakePHP system to Laravel with Inertia and Vue 3. Covers equipment fleet dispatch, job and site scheduling, subcontractor management, and a mobile driver docket workflow feeding billing and payroll.',
+        highlights: [
+            'Incremental migration of a legacy CakePHP 2 application to Laravel, run side-by-side in production',
+            'Job and site scheduling system coordinating equipment dispatch, subcontractor drivers, and material deliveries',
+            'Mobile driver docket workflow with attached imagery, GPS/vehicle location tracking, and reconciliation into billing',
+            'Quoting and rate management with revisioned rentals, rate groups, and client-specific pricing',
+            'AWS Elastic Beanstalk deployment pipeline with GitHub Actions, alongside SMS notifications and Algolia search',
+        ],
+        url: new Url('https://phs-vic.ephgroup.com.au'),
+    ))
+
+    ->addProject(new Project(
+        name: 'DcodePay',
+        startDate: '2025-04-01',
+        description: 'Stripe-backed payments API powering in-app and card-present payments for a mobile app, built on Laravel 12 with a team-based multi-tenant model. Handles payment intents, setup intents for saved payment methods, Stripe Terminal connection tokens, refunds, and fee calculation.',
+        highlights: [
+            'Team-scoped API for mobile clients covering login, payments, setup intents, and Stripe Terminal connection tokens',
+            'Stripe integration for payment and setup intent lifecycles, webhook event handling, and refunds',
+            'Service and handling fee calculation applied across payments per team',
+            'Payment CSV export and API filtering for reporting and reconciliation',
+            'Auto-generated API documentation (Scribe) and feature-tested endpoints backing the mobile app',
+        ],
+        url: new Url('https://dcodepay.com.au'),
+    ))
+
+    ->addProject(new Project(
+        name: 'Kanopi',
+        startDate: '2020-11-01',
+        description: "DCODE Group's internal agency operations platform, built on Laravel with Vue and Inertia. Unifies client and project management, a support helpdesk, GitHub activity tracking, invoicing, and team collaboration into the company's primary day-to-day internal tool, actively developed and extended since 2020.",
+        highlights: [
+            'Client and project management covering contacts, project stages/milestones, and quoting and invoicing synced with Xero',
+            'Support helpdesk with email-to-ticket inbox parsing, severity/status workflows, and automatic ticket creation from Bugsnag errors and Dependabot alerts',
+            'GitHub integration tracking repositories, pull requests, reviews, and releases across the organisation via webhooks',
+            'Timesheet and leave management with per-user and per-team reporting summaries',
+            'Real-time internal chat and notifications built on Laravel Reverb/Pusher',
+            'Passkey (WebAuthn) authentication alongside traditional login, via Spatie Laravel Passkeys',
+            'Full-text search across clients, projects, and tickets using Typesense/Laravel Scout, with AI-assisted features via OpenAI',
+            'Internal wiki and knowledge base for team documentation',
+        ],
+        url: new Url('https://kanopi.live'),
+    ))
+
+    ->addProject(new Project(
+        name: 'Aid To Church / That Catholic Shop',
+        startDate: '2020-11-01',
+        description: 'Dual-brand Laravel platform combining Aid to Church in Need (ACN), a Catholic charity, with its e-commerce arm That Catholic Shop (TCS), served from two domains within a single codebase. Covers donation campaigns, mass offerings and dedications, parish management, and a full product catalog and checkout with Stripe and PayPal.',
+        highlights: [
+            'Domain-based multi-site routing serving both the ACN charity site and the TCS storefront from one codebase',
+            'Donation and campaign management including mass offerings, dedications, gift processing, and parish/diocese relationships',
+            'E-commerce catalog and checkout with products, variants, cart, coupons, and order fulfilment',
+            'Payment processing via Stripe and PayPal, including failed payment tracking and reconciliation',
+            'Marketing tooling covering campaigns, referrals, surveys, and form entries',
+            'Xero accounting integration, Typesense search, and CSV/Excel export for reporting',
+            'CMS features including blog, page builder with revisions, menus, popups, redirects, and SEO management',
+        ],
+        url: new Url('https://aidtochurch.org/'),
+    ))
+    ->addProject(new Project(
+        name: 'Dynamic Trade Solutions',
+        startDate: '2020-11-01',
+        description: 'Field service and job management platform for a trades/electrical services business, coordinating project and task scheduling, timesheets, fleet, and materials across regional teams. Includes supplier payable integrations and a custom reporting engine for task planning, revenue, and time-on-site/travel analytics.',
+        highlights: [
+            'Task and job scheduling/dispatch across regional teams and project types, with templated task and quote workflows',
+            'Timesheet and leave management feeding payroll pay items, alongside vehicle fleet tracking and service requests',
+            'Quoting and client project management from quote acceptance through to task completion and invoicing',
+            'SOAP-based payable integrations with major suppliers for materials procurement and GL account reconciliation',
+            'Custom reporting engine generating task planning, revenue, and time-on-site/travel summaries via scheduled Horizon jobs',
+            'Dynamic form templates for field data capture, with attachments, signatures, and notifications',
+        ],
+        url: new Url('https://app.dynamicts.com.au'),
+    ))
+
+    ->addProject(new Project(
+        name: 'Best Rated Transport',
+        startDate: '2015-01-01',
+        endDate: '2016-10-01',
+        description: 'Western Australian branch of the national association for independent schools. Built on Drupal 7 with a teacher professional development platform, a school job portal, and a capital grants application system handling sensitive student and school data.',
+        highlights: [
+            'Drupal 7 platform with role-based candidate and school portals',
+            'Third-party email delivery integration for guaranteed notification tracking',
+            'Personal Development Plan (PDP) system for teachers with searchable job matching and approval workflows',
+            'Job portal automating applications and notifications between schools and candidates',
+            'Capital Grants application system handling sensitive student and school data for funding submissions',
+        ],
         url: new Url('https://www.ais.wa.edu.au/'),
-    )
+    ))
 
     // --- Languages ---
 
