@@ -203,7 +203,7 @@ $resume = (new ResumeBuilder)
     ->addSkill(new Skill(
         name: 'Database & Caching',
         level: SkillLevel::Expert,
-        keywords: ['MySQL', 'MariaDB', 'Redis', 'Memcached', 'Elasticsearch', 'Solr', 'Queue systems'],
+        keywords: ['MySQL', 'MariaDB', 'Redis', 'Typesense', 'Valkey', 'Memcached', 'Elasticsearch', 'Solr', 'Queue systems'],
     ))
 
     ->addSkill(new Skill(
@@ -215,7 +215,7 @@ $resume = (new ResumeBuilder)
     ->addSkill(new Skill(
         name: 'Payment Processing',
         level: SkillLevel::Advanced,
-        keywords: ['Stripe', 'eWay', 'PCI compliance', 'Checkout', 'Payment elements', 'Webhooks'],
+        keywords: ['Stripe', 'eWay', 'PayPal', 'PCI compliance', 'Checkout', 'Payment elements', 'Webhooks'],
     ))
 
     ->addSkill(new Skill(
