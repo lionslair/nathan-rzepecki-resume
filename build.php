@@ -258,47 +258,6 @@ $resume = (new ResumeBuilder)
     // --- Projects ---
 
     ->addProject(new Project(
-        name: 'The Trusted Trolley',
-        startDate: '2013-03-01',
-        endDate: '2015-05-01',
-        description: 'Health food information website helping consumers identify products free from harmful additives. Built with Drupal 7, featuring Solr-powered search and a subscription-based catalogue.',
-        highlights: [
-            'Drupal 7 repository of food products and additives',
-            'Solr integration for fast and accurate product search',
-            'Subscription membership system for catalogue access',
-        ],
-        url: new Url('http://www.thetrustedtrolley.com.au'),
-    ))
-
-    ->addProject(new Project(
-        name: 'Short Street Gallery',
-        startDate: '2013-04-01',
-        endDate: '2015-05-01',
-        description: 'Full business management system for a premier Indigenous art gallery in Broome, WA. Built on Drupal 6 with complete back-office management including artworks, clients, artists, financials, exhibitions, reporting, and marketing.',
-        highlights: [
-            'Complex Drupal 6 CMS tailored to gallery business processes',
-            'Full data migration from legacy FileMaker system',
-            'Financial management, exhibition tracking, and marketing modules',
-        ],
-        url: new Url('http://shortstgallery.com.au'),
-    ))
-
-    ->addProject(new Project(
-        name: 'Association of Independent Schools of Western Australia',
-        startDate: '2015-01-01',
-        endDate: '2016-10-01',
-        description: 'Western Australian branch of the national association for independent schools. Built on Drupal 7 with a teacher professional development platform, a school job portal, and a capital grants application system handling sensitive student and school data.',
-        highlights: [
-            'Drupal 7 platform with role-based candidate and school portals',
-            'Third-party email delivery integration for guaranteed notification tracking',
-            'Personal Development Plan (PDP) system for teachers with searchable job matching and approval workflows',
-            'Job portal automating applications and notifications between schools and candidates',
-            'Capital Grants application system handling sensitive student and school data for funding submissions',
-        ],
-        url: new Url('https://www.ais.wa.edu.au'),
-    ))
-
-    ->addProject(new Project(
         name: 'Flooringlab',
         startDate: '2020-10-01',
         description: 'Multi-tenant B2B trade platform for the flooring industry, built on Laravel with Vue 3 and Livewire. Long-running lead engineering role spanning order and inventory management, warehouse operations, subscription billing, and accounting integration across a growing multi-tenant SaaS product.',
@@ -399,6 +358,45 @@ $resume = (new ResumeBuilder)
             'Short-link generation for tenders, activity logging across the quote/tender lifecycle, and automated post-job review request emails',
         ],
         url: new Url('https://bestratedtransport.com.au'),
+    ))
+    ->addProject(new Project(
+        name: 'Association of Independent Schools of Western Australia',
+        startDate: '2015-01-01',
+        endDate: '2016-10-01',
+        description: 'Western Australian branch of the national association for independent schools. Built on Drupal 7 with a teacher professional development platform, a school job portal, and a capital grants application system handling sensitive student and school data.',
+        highlights: [
+            'Drupal 7 platform with role-based candidate and school portals',
+            'Third-party email delivery integration for guaranteed notification tracking',
+            'Personal Development Plan (PDP) system for teachers with searchable job matching and approval workflows',
+            'Job portal automating applications and notifications between schools and candidates',
+            'Capital Grants application system handling sensitive student and school data for funding submissions',
+        ],
+        url: new Url('https://www.ais.wa.edu.au'),
+    ))
+    ->addProject(new Project(
+        name: 'The Trusted Trolley',
+        startDate: '2013-03-01',
+        endDate: '2015-05-01',
+        description: 'Health food information website helping consumers identify products free from harmful additives. Built with Drupal 7, featuring Solr-powered search and a subscription-based catalogue.',
+        highlights: [
+            'Drupal 7 repository of food products and additives',
+            'Solr integration for fast and accurate product search',
+            'Subscription membership system for catalogue access',
+        ],
+        url: new Url('http://www.thetrustedtrolley.com.au'),
+    ))
+
+    ->addProject(new Project(
+        name: 'Short Street Gallery',
+        startDate: '2013-04-01',
+        endDate: '2015-05-01',
+        description: 'Full business management system for a premier Indigenous art gallery in Broome, WA. Built on Drupal 6 with complete back-office management including artworks, clients, artists, financials, exhibitions, reporting, and marketing.',
+        highlights: [
+            'Complex Drupal 6 CMS tailored to gallery business processes',
+            'Full data migration from legacy FileMaker system',
+            'Financial management, exhibition tracking, and marketing modules',
+        ],
+        url: new Url('http://shortstgallery.com.au'),
     ))
 
     // --- Languages ---
