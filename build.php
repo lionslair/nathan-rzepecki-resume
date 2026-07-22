@@ -192,7 +192,7 @@ $resume = (new ResumeBuilder)
     ->addSkill(new Skill(
         name: 'Cloud & Infrastructure',
         level: SkillLevel::Advanced,
-        keywords: ['AWS S3', 'AWS Lambda', 'AWS RDS', 'AWS SES', 'Route53', 'CloudFront', 'WAF', 'Textract', 'Laravel Forge', 'Docker', 'Docker Compose', 'Ansible', 'Terraform'],
+        keywords: ['AWS S3', 'AWS Lambda', 'AWS RDS', 'AWS SES', 'Route53', 'CloudFront', 'WAF', 'Elastic Beanstalk', 'Textract', 'Laravel Forge', 'Docker', 'Docker Compose', 'Ansible', 'Terraform'],
     ))
 
     ->addSkill(new Skill(
@@ -204,7 +204,7 @@ $resume = (new ResumeBuilder)
     ->addSkill(new Skill(
         name: 'Database & Caching',
         level: SkillLevel::Expert,
-        keywords: ['MySQL', 'MariaDB', 'SQL Server', 'Redis', 'Typesense', 'Valkey', 'Memcached', 'Elasticsearch', 'Solr', 'Queue systems'],
+        keywords: ['MySQL', 'MariaDB', 'SQL Server', 'Redis', 'Typesense', 'Elasticsearch', 'Meilisearch', 'Valkey', 'Memcached', 'Elasticsearch', 'Solr', 'Queue systems'],
     ))
 
     ->addSkill(new Skill(
