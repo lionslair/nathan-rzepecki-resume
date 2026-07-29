@@ -28,6 +28,7 @@ $resume = (new ResumeBuilder)
         name: 'Nathan Rzepecki',
         label: 'Full-Stack Software Engineer | PHP & Laravel Expert',
         email: new Email('nathan@lionslair.net.au'),
+        image: new Url('https://cdn.lionslair.net.au/Nathan-Rzepecki.jpg'),
         // phone: '+61 412 850 501',
         url: new Url('https://nathanrzepecki.me'),
         summary: 'Full-stack software engineer with extensive expertise in Laravel and Vue.js, specialising in building scalable web applications and API integrations. Proven track record developing healthcare platforms, payment systems, and enterprise solutions with a focus on security, performance, and maintainability. DevOps proficient with Docker, CI/CD pipelines, and cloud infrastructure (AWS). Strong advocate for privacy and data ownership — personally maintains a fully local, self-hosted home automation system using Home Assistant. Based in Western Australia; successfully working remote since 2018.',
