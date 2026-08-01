@@ -441,7 +441,7 @@ $metaTags = <<<HTML
     <link rel="icon" type="image/x-icon" href="{$assetBase}/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="{$assetBase}/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="{$assetBase}/apple-touch-icon.png" />
-    <meta property="og:type" content="profile" />
+    <meta property="og:type" content="website.profile" />
     <meta property="og:title" content="{$title}" />
     <meta property="og:description" content="{$description}" />
     <meta property="og:url" content="{$pageUrl}" />
