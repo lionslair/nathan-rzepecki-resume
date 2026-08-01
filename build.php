@@ -28,7 +28,7 @@ $resume = (new ResumeBuilder)
         name: 'Nathan Rzepecki',
         label: 'Full-Stack Software Engineer | PHP & Laravel Expert',
         email: new Email('nathan@lionslair.net.au'),
-        image: new Url('https://cdn.lionslair.net.au/Nathan-Rzepecki.jpg'),
+        image: new Url('https://cdn.nathanrzepecki.me/headshot.jpg'),
         // phone: '+61 412 850 501',
         url: new Url('https://nathanrzepecki.me'),
         summary: 'Full-stack software engineer with extensive expertise in Laravel and Vue.js, specialising in building scalable web applications and API integrations. Proven track record developing healthcare platforms, payment systems, and enterprise solutions with a focus on security, performance, and maintainability. DevOps proficient with Docker, CI/CD pipelines, and cloud infrastructure (AWS). Strong advocate for privacy and data ownership — personally maintains a fully local, self-hosted home automation system using Home Assistant. Based in Western Australia; successfully working remote since 2018.',
@@ -431,6 +431,30 @@ if (! is_dir(__DIR__.'/output')) {
 $json = json_encode($resume->jsonSerialize(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 file_put_contents(__DIR__.'/output/resume.json', $json);
 echo "✓ output/resume.json\n";
+
+// Favicon + Open Graph / Twitter card tags, injected into resume.html by build.sh
+$assetBase = 'https://cdn.nathanrzepecki.me';
+$pageUrl = 'https://resume.nathanrzepecki.me';
+$title = htmlspecialchars($resume->basics->name.' - '.$resume->basics->label, ENT_QUOTES);
+$description = htmlspecialchars($resume->basics->summary ?? '', ENT_QUOTES);
+$metaTags = <<<HTML
+    <link rel="icon" type="image/x-icon" href="{$assetBase}/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{$assetBase}/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{$assetBase}/apple-touch-icon.png" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="{$title}" />
+    <meta property="og:description" content="{$description}" />
+    <meta property="og:url" content="{$pageUrl}" />
+    <meta property="og:image" content="{$assetBase}/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{$title}" />
+    <meta name="twitter:description" content="{$description}" />
+    <meta name="twitter:image" content="{$assetBase}/og-image.jpg" />
+    HTML;
+file_put_contents(__DIR__.'/output/meta-tags.html', $metaTags);
+echo "✓ output/meta-tags.html\n";
 
 // YAML
 $yaml = (new YamlExporter)->export($resume);
